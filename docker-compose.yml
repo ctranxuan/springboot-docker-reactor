@@ -1,0 +1,9 @@
+helloworld:
+  image: ws13-learning/springboot-docker-hello-world:0.0.1-SNAPSHOT
+  ports:
+    - 8080:8080
+
+helloclient:
+  image: ws13-learning/springboot-docker-hello-client:0.0.1-SNAPSHOT
+  links:
+    - helloworld
